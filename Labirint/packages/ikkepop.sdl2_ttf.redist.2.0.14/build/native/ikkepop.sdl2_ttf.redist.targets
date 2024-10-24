@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="ikkepop_sdl2_ttf_redist_init;ikkepop_sdl2_ttf_redist_init_2">
+  <PropertyGroup Label="Default initializers for properties">
+    <Linkage-ikkepop_sdl2_ttf_redist Condition="'$(Linkage-ikkepop_sdl2_ttf_redist)' == ''">dynamic</Linkage-ikkepop_sdl2_ttf_redist>
+    <CallingConvention-ikkepop_sdl2_ttf_redist Condition="'$(CallingConvention-ikkepop_sdl2_ttf_redist)' == ''">cdecl</CallingConvention-ikkepop_sdl2_ttf_redist>
+  </PropertyGroup>
+  <Target Name="ikkepop_sdl2_ttf_redist_init">
+    <ikkepop_sdl2_ttf_redist_Contains Text="Linkage-dynamic" Library="ikkepop_sdl2_ttf_redist" Value="dynamic" Condition="'$(Linkage-ikkepop_sdl2_ttf_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-ikkepop_sdl2_ttf_redist" />
+    </ikkepop_sdl2_ttf_redist_Contains>
+    <ikkepop_sdl2_ttf_redist_Contains Text="Linkage-static" Library="ikkepop_sdl2_ttf_redist" Value="static" Condition="'$(Linkage-ikkepop_sdl2_ttf_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-ikkepop_sdl2_ttf_redist" />
+    </ikkepop_sdl2_ttf_redist_Contains>
+    <ikkepop_sdl2_ttf_redist_Contains Text="Linkage-ltcg" Library="ikkepop_sdl2_ttf_redist" Value="ltcg" Condition="'$(Linkage-ikkepop_sdl2_ttf_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-ikkepop_sdl2_ttf_redist" />
+    </ikkepop_sdl2_ttf_redist_Contains>
+    <ikkepop_sdl2_ttf_redist_Contains Text="Linkage-sxs" Library="ikkepop_sdl2_ttf_redist" Value="sxs" Condition="'$(Linkage-ikkepop_sdl2_ttf_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-ikkepop_sdl2_ttf_redist" />
+    </ikkepop_sdl2_ttf_redist_Contains>
+    <ikkepop_sdl2_ttf_redist_Contains Text="CallingConvention-cdecl" Library="ikkepop_sdl2_ttf_redist" Value="cdecl" Condition="'$(CallingConvention-ikkepop_sdl2_ttf_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-ikkepop_sdl2_ttf_redist" />
+    </ikkepop_sdl2_ttf_redist_Contains>
+    <ikkepop_sdl2_ttf_redist_Contains Text="CallingConvention-stdcall" Library="ikkepop_sdl2_ttf_redist" Value="stdcall" Condition="'$(CallingConvention-ikkepop_sdl2_ttf_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-ikkepop_sdl2_ttf_redist" />
+    </ikkepop_sdl2_ttf_redist_Contains>
+    <ikkepop_sdl2_ttf_redist_Contains Text="CallingConvention-fastcall" Library="ikkepop_sdl2_ttf_redist" Value="fastcall" Condition="'$(CallingConvention-ikkepop_sdl2_ttf_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-ikkepop_sdl2_ttf_redist" />
+    </ikkepop_sdl2_ttf_redist_Contains>
+    <ikkepop_sdl2_ttf_redist_Contains Text="CallingConvention-thiscall" Library="ikkepop_sdl2_ttf_redist" Value="thiscall" Condition="'$(CallingConvention-ikkepop_sdl2_ttf_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-ikkepop_sdl2_ttf_redist" />
+    </ikkepop_sdl2_ttf_redist_Contains>
+    <ikkepop_sdl2_ttf_redist_Contains Text="CallingConvention-clrcall" Library="ikkepop_sdl2_ttf_redist" Value="clrcall" Condition="'$(CallingConvention-ikkepop_sdl2_ttf_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-ikkepop_sdl2_ttf_redist" />
+    </ikkepop_sdl2_ttf_redist_Contains>
+  </Target>
+  <Target Name="ikkepop_sdl2_ttf_redist_init_2">
+    <SetEnv Condition="'$(Platform.ToLower())' == 'win32'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'x64'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//build/native/bin/x64">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+  </Target>
+  <ItemGroup Label="Win32" Condition="'$(Platform.ToLower())' == 'win32'">
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\libfreetype-6.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\SDL2_ttf.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\zlib1.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="x64" Condition="'$(Platform.ToLower())' == 'x64'">
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\libfreetype-6.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\SDL2_ttf.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\zlib1.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\default-propertiesui.xml" />
+  </ItemGroup>
+  <Target Name="ikkepop_sdl2_ttf_redist_AfterBuild" AfterTargets="AfterBuild" />
+  <Target Name="ikkepop_sdl2_ttf_redist_AfterBuild_Win32" Label="Win32" Condition="'$(Platform.ToLower())' == 'win32'" AfterTargets="ikkepop_sdl2_ttf_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\libfreetype-6.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\SDL2_ttf.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\zlib1.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="ikkepop_sdl2_ttf_redist_AfterBuild_x64" Label="x64" Condition="'$(Platform.ToLower())' == 'x64'" AfterTargets="ikkepop_sdl2_ttf_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\libfreetype-6.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\SDL2_ttf.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\zlib1.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <UsingTask TaskName="ikkepop_sdl2_ttf_redist_Contains" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">
+    <ParameterGroup>
+      <Text Output="false" ParameterType="System.String" />
+      <Library Output="false" Required="true" ParameterType="System.String" />
+      <Value Output="false" Required="true" ParameterType="System.String" />
+      <Result Output="true" ParameterType="System.String" />
+    </ParameterGroup>
+    <Task>
+      <Code>Result = ((Text ?? "").Split(';').Contains(Library) ) ? Value : String.Empty;</Code>
+    </Task>
+  </UsingTask>
+</Project>

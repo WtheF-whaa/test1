@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\github\\test1\\Labirint\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{65625A65-2F5A-43B8-B6D9-9C2140126BBE}|Labirint\\Labirint.vcxproj|C:\\github\\test1\\Labirint\\Labirint\\Labirint.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{65625A65-2F5A-43B8-B6D9-9C2140126BBE}|Labirint\\Labirint.vcxproj|solutionrelative:Labirint\\Labirint.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Labirint.cpp",
+              "DocumentMoniker": "C:\\github\\test1\\Labirint\\Labirint\\Labirint.cpp",
+              "RelativeDocumentMoniker": "Labirint\\Labirint.cpp",
+              "ToolTip": "C:\\github\\test1\\Labirint\\Labirint\\Labirint.cpp*",
+              "RelativeToolTip": "Labirint\\Labirint.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-22T15:41:19.496Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
